@@ -23,7 +23,7 @@ If you'd like to use this layout you need to download the `latest` firmware vers
 
 ![Lower layer](images/lower_layer.png)
 
-![Raise layer](images/raise_layer.png)
+![Raise layer](images/raise_layr.png)
 
 ![Config layer](images/config_layer.png)
 
