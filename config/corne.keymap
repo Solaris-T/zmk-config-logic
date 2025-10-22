@@ -83,19 +83,19 @@
             >;
         };
 
-        config_layer {
-            // -------------------------------------------------------------------------------------------------------------------------
-            // |     |          |          |          |          |          |                  |     |     |     |     |      |
-            // |     | BT_SEL 0 | BT_SEL 1 | BT_SEL 2 | BT_SEL 3 | BT_SEL 4 |                  |     |     |     |     |      |
-            // |     |  BT_CLR  |          |          |          |          |                  |     |     |     |     |      |
-            // -------------------------------------------------------------------------------------------------------------------------
+       config_layer {
+            // -----------------------------------------------------------------------------------------
+            // | F6 | C_PREV | C_PLAY | C_NEXT | C_MUTE |      |
+            // | BT0 | BT1 | BT2 | BT3 | BT4 | RGB_TOG | RGB_EFF | RGB_EFR | VOL_DN | VOL_UP |      |
+            // | CLR | trans | trans | trans | trans | BL_TOG | BL_INC | BL_DEC | BL_ON | BL_OFF |      |
+            // -----------------------------------------------------------------------------------------
 
             bindings = <
-// Top Row
+// Top Row: Left Hand (T) & Right Hand (Y)
 &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(UP)    &kp C_AC_SEARCH  &kp C_VOICE_COMMAND    &kp F6           &kp C_PREVIOUS   &kp C_PLAY_PAUSE  &kp C_NEXT         &kp C_MUTE       &trans
-// Home Row
+// Home Row: Left Hand (G) & Right Hand (H)
 &trans  &bt BT_SEL 0          &bt BT_SEL 1          &bt BT_SEL 2  &bt BT_SEL 3      &bt BT_SEL 4           &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans
-// Bottom Row - **PER-KEY BACKLIGHT CONTROLS ADDED HERE**
+// Bottom Row: Left Hand (B) & Right Hand (N) - **PER-KEY BACKLIGHT CONTROLS ADDED**
 &trans  &bt BT_CLR            &trans                &trans        &trans           &trans                 &bl BL_TOG       &bl BL_INC       &bl BL_DEC        &bl BL_ON          &bl BL_OFF       &trans
 // Thumb Keys
                                                     &trans        &trans           &trans                 &trans           &trans           &trans
