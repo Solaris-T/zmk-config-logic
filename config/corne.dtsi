@@ -1,0 +1,24 @@
+// This file is a Device Tree Source Inclusion (DTSi) file
+// It overrides board/shield settings for the Corne.
+
+&kscan0 {
+    // Corrects key mapping for the 36-key Corne.
+    // If your keymap is already correct, this line may not be strictly necessary,
+    // but it is good practice to explicitly define the matrix size.
+    row-count = <3>;
+    col-count = <6>;
+};
+
+&led_strip {
+    // This defines the per-key LED strip (backlight).
+    // A 36-key Corne has 18 per-key LEDs per half.
+    // Set this to 18 for a standard 5-column Corne.
+    chain-length = <18>; 
+
+    // Adjust these if your per-key LEDs are WS2812 type (most common).
+    color-mapping = <
+        LED_COLOR_ID_GREEN
+        LED_COLOR_ID_RED
+        LED_COLOR_ID_BLUE
+    >;
+};
